@@ -3,7 +3,7 @@ int main()
 {
     double valor,D,E;
     scanf ("%lf",&valor);
-    int N,n100,b,b2,n50,n20,n10,h,n5,n2,m1,B,m,n,o,p,q,r,s,t,u;
+    int N,n100,b,b2,n50,n20,n10,h,n5,n2,m1,B,m,m50,o,m25,q,m10,s,m05,m01;
     N=valor;
     n100=N/100;//conta as notas de 100
     b=N%100;// tira as notas de 100
@@ -19,20 +19,16 @@ int main()
     m1=b%2;// tira as notas de 2 o resultado é igual ao numeros de 1 real
 
     E=valor*100;
-    //printf("antes: %lf\n",E);
-    B=(int) E; //pega a parte inteira do valor
-    //printf("DEPOIS: %d",B);
-	m=B%100;
-	printf("m: %d \n",m);
-    n=m/50;
-    printf("n: %d \n",n);
-    o=m%50;
-    p=o/25;
-    q=o%25;
-    r=q/10;
-    s=q%10;
-    t=s/5;
-    u=s%5;
+    b=(int) E; //pega a parte inteira do valor
+	b2=b%100; // para pegar somente os centavos
+    m50=b2/50; // pega os 0,50 centavos
+    b=b2%50; //tira os 50 centavos
+    m25=b/25; // pega os 25 centavos
+    b2=b%25; //tira os 25 centavos
+    m10=b2/10; // pega os 10 centavos
+    b=b2%10; //tira os 10 centavos
+    m05=b/5; // pega os 5 centavos
+    m01=b%5; //tira os 5 centavos
 
     printf ("NOTAS:\n");
     printf ("%d nota(s) de R$ 100.00\n",n100);
@@ -43,11 +39,11 @@ int main()
     printf ("%d nota(s) de R$ 2.00\n",n2);
     printf ("MOEDAS:\n");
     printf ("%d moeda(s) de R$ 1.00\n",m1);
-    printf ("%d moeda(s) de R$ 0.50\n",n);
-    printf ("%d moeda(s) de R$ 0.25\n",p);
-    printf ("%d moeda(s) de R$ 0.10\n",r);
-    printf ("%d moeda(s) de R$ 0.05\n",t);
-    printf ("%d moeda(s) de R$ 0.01\n",u);
+    printf ("%d moeda(s) de R$ 0.50\n",m50);
+    printf ("%d moeda(s) de R$ 0.25\n",m25);
+    printf ("%d moeda(s) de R$ 0.10\n",m10);
+    printf ("%d moeda(s) de R$ 0.05\n",m05);
+    printf ("%d moeda(s) de R$ 0.01\n",m01);
 
     return 0;
 }
