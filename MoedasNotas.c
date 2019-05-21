@@ -20,15 +20,15 @@ int main()
 
     E=valor*100;
     b=(int) E; //pega a parte inteira do valor
-	b2=b%100; // para pegar somente os centavos
+	b2=b%100;  // para pegar somente os centavos
     m50=b2/50; // pega os 0,50 centavos
-    b=b2%50; //tira os 50 centavos
-    m25=b/25; // pega os 25 centavos
-    b2=b%25; //tira os 25 centavos
+    b=b2%50;   //tira os 50 centavos
+    m25=b/25;  // pega os 25 centavos
+    b2=b%25;   //tira os 25 centavos
     m10=b2/10; // pega os 10 centavos
-    b=b2%10; //tira os 10 centavos
-    m05=b/5; // pega os 5 centavos
-    m01=b%5; //tira os 5 centavos
+    b=b2%10;   //tira os 10 centavos
+    m05=b/5;   // pega os 5 centavos
+    m01=b%5;   //tira os 5 centavos
 
     printf ("NOTAS:\n");
     printf ("%d nota(s) de R$ 100.00\n",n100);
