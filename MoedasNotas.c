@@ -1,10 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    double valor,D,E;
+    double valor,E;
     scanf ("%lf",&valor);
-    int N,n100,b,b2,n50,n20,n10,h,n5,n2,m1,B,m,m50,o,m25,q,m10,s,m05,m01;
-    N=valor;
+    int N,n100,b,b2,n50,n20,n10,h,n5,n2,m1,B,m50,o,m25,m10,m05,m01;
+    N=valor;//PEGA SO AS PARTE INTEIRAS, OU SEJA, AS NOTAS
+    //printf("%d",N);
     n100=N/100;//conta as notas de 100
     b=N%100;// tira as notas de 100
     n50=b/50;//conta as notas de 50
@@ -18,9 +19,14 @@ int main()
     n2=b/2;//conta as notas de 2
     m1=b%2;// tira as notas de 2 o resultado é igual ao numeros de 1 real
 
+	//printf("valor antes: %lf \n",valor);
     E=valor*100;
+	//printf("E depois: %lf \n",E);
+
     b=(int) E; //pega a parte inteira do valor
+    //printf("b: %d \n",b);
 	b2=b%100;  // para pegar somente os centavos
+	//printf("b2: %d \n",b2);
     m50=b2/50; // pega os 0,50 centavos
     b=b2%50;   //tira os 50 centavos
     m25=b/25;  // pega os 25 centavos
