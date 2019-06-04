@@ -1,12 +1,14 @@
 #include <stdio.h>
-int main(){
-    int anos, a, b;
-    double ac, bc;
+int main() {
+    int anos;
+    long populacaoA, populacaoB;
+    double taxaCrescimentoA, taxaCrescimentoB;
+ 
     anos = 0;
-    scanf("%d %d %lf %lf", &a, &b, &ac, &bc);
-    while(a <= b){
-        a *= (ac / 100.0) + 1.0;
-        b *= (bc / 100.0) + 1.0;
+    scanf("%d %d %lf %lf", &populacaoA, &populacaoB, &taxaCrescimentoA, &taxaCrescimentoB);
+    while(populacaoA <= populacaoB){
+       	populacaoA+= (long) (populacaoA*taxaCrescimentoA/100);
+       	populacaoB+= (long) (populacaoB*taxaCrescimentoB/100);
         anos++;
         if (anos > 100){
             printf("Mais de 1 seculo.\n");
@@ -14,7 +16,7 @@ int main(){
         }
     }
     if (anos <= 100){
-		printf("%d anos.\n", anos);
-	}       
+        printf("%d anos.\n", anos);
+	}
     return 0;
 }
